@@ -6,7 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('titulo','Aurora')</title>
-    @vite('resources/css/app.css')
+    {{--@vite('resources/css/app.css')--}}
 </head>
 <body>
     <header>
