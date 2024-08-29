@@ -17,10 +17,11 @@ class ProveedorFactory extends Factory
     public function definition(): array
     {
         return [
-            'nombre' => fake() -> word(),
-            'descripcion' => fake() -> text(),
-            'metros' => fake() -> numberBetween(1,100000000000),
-            
+            'aup_name' => fake() -> word(),
+            'aup_dennier' => fake() -> word(),
+            'aup_meters_threads' => fake() -> numberBetween(1,1200),
+            'aup_type_threads'=> fake() -> word(),
+            'aup_status' => fake() -> word(),
         ];
     }
 }

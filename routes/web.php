@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/','welcome');
+Route::view('/','suppliers.index');
 
-//Route::resource('supplier', App\Http\Controllers\ProveedorController::class)->name('route.name.for.index');
-Route::get('/proveedores', [App\Http\Controllers\ProveedorController::class, 'index'])->name('supplier.index');
-Route::resource('/supplier/{id}', App\Http\Controllers\ProveedorController::class);
+Route::resource('supplier', App\Http\Controllers\SupplierController::class);
+
+

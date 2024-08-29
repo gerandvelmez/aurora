@@ -2,23 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Proveedor;
+use App\Models\Supplier;
 use Illuminate\Http\Request;
 
-class ProveedorController extends Controller
+class SupplierController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $proveedor = Proveedor::all();
-
-        return view('layouts.supplier', compact('proveedor'));
+        $supplier = Supplier::all();
+        dump($supplier);
+         return view('suppliers.index', compact('supplier'));
     }
 
-    /**
-     * Show the form for creating a new resource.
+    /**     * Show the form for creating a new resource.
      */
     public function create()
     {
@@ -38,14 +37,14 @@ class ProveedorController extends Controller
      */
     public function show($id)
     {
-        $proveedor = Proveedor::find($id);
-        return view('layouts.supplierDetail', compact('proveedor'));    
+        $suppliers = Supplier::find($id);
+        return view('layouts.supplierDetail', compact('suppliers'));    
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Proveedor $proveedor)
+    public function edit(Supplier $supplier)
     {
         //
     }
@@ -53,7 +52,7 @@ class ProveedorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Proveedor $proveedor)
+    public function update(Request $request, Supplier $supplier)
     {
         //
     }
@@ -61,7 +60,7 @@ class ProveedorController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Proveedor $proveedor)
+    public function destroy(Supplier $supplier)
     {
         //
     }
