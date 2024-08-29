@@ -13,8 +13,7 @@ class SupplierController extends Controller
     public function index()
     {
         $supplier = Supplier::all();
-        dump($supplier);
-         return view('suppliers.index', compact('supplier'));
+        return view('suppliers.index', compact('supplier'));
     }
 
     /**     * Show the form for creating a new resource.
@@ -38,7 +37,7 @@ class SupplierController extends Controller
     public function show($id)
     {
         $suppliers = Supplier::find($id);
-        return view('layouts.supplierDetail', compact('suppliers'));    
+        return view('layouts.supplierDetail', compact('suppliers'));
     }
 
     /**
