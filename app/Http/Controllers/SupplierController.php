@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Supplier;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class SupplierController extends Controller
 {
@@ -20,7 +21,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        //
+        return view(' supplier.create');
     }
 
     /**
@@ -37,7 +38,7 @@ class SupplierController extends Controller
     public function show($id)
     {
         $suppliers = Supplier::find($id);
-        return view('layouts.supplierDetail', compact('suppliers'));
+        return view('layouts.supplierDetail', compact('supplier'));
     }
 
     /**
@@ -45,7 +46,7 @@ class SupplierController extends Controller
      */
     public function edit(Supplier $supplier)
     {
-        //
+        return view(' supplier.edit', compact('supplier'));
     }
 
     /**
@@ -53,7 +54,8 @@ class SupplierController extends Controller
      */
     public function update(Request $request, Supplier $supplier)
     {
-        //
+        $supplier->update($request->all());
+        return redirect()->route('supplier.index');
     }
 
     /**
@@ -61,6 +63,7 @@ class SupplierController extends Controller
      */
     public function destroy(Supplier $supplier)
     {
-        //
+        $supplier->delete();
+        return redirect()->route('supplier.index');
     }
 }
