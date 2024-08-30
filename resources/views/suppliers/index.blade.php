@@ -6,7 +6,7 @@
 
 @section('contenido')
     <div class="flex justify-end m-4">
-        <a href="{{ route('supplier.create') }}" class= "btn btn-outline">Nuevo Proveedor</a>
+        <a href="{{ route('supplier.create') }}" class="btn btn-primary">Nuevo Proveedor</a>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:cols-4 gap-4 m-6">

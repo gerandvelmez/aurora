@@ -21,7 +21,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        return view(' supplier.create');
+        return view('suppliers.create');
     }
 
     /**
@@ -37,16 +37,16 @@ class SupplierController extends Controller
      */
     public function show($id)
     {
-        $suppliers = Supplier::find($id);
+        $supplier = Supplier::find($id);
         return view('layouts.supplierDetail', compact('supplier'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Supplier $supplier)
+    public function edit()
     {
-        return view(' supplier.edit', compact('supplier'));
+        return view('suppliers.edit');
     }
 
     /**

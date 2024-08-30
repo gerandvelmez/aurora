@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/','welcome','/','supplier.index',);
+Route::view('/','supplier.edit',);
 
 Route::resource('supplier', App\Http\Controllers\SupplierController::class);
 
