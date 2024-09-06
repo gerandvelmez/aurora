@@ -6,7 +6,8 @@
 @section('contenido')
     <div class= "flex justify-center my-6 ">
         <div class= "card bg-base-100 w-96 shadow-2xl">
-            <form class="card-body" action="{{ route('supplier.edit') }}" method="POST">
+            <form class="card-body" action="{{ route('supplier.edit', $supplier->aup_id) }}" method="POST">
+          
                 @csrf
                 @method('PUT')
 

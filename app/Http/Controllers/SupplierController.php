@@ -35,22 +35,29 @@ class SupplierController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show($aup_id)
     {
-        $supplier = Supplier::find($id);
+        $supplier = Supplier::find($aup_id);
         return view('layouts.supplierDetail', compact('supplier'));
     }
 
+   
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit()
+    public function edit($id)
+{
+    $supplier = Supplier::findOrFail($id);
+    return view('suppliers.edit', compact('supplier'));
+}
+
+    /**public function edit($id)
     {
         return view('suppliers.edit');
-    }
+    }**/
 
-    /**
-     * Update the specified resource in storage.
+    
+    /* Update the specified resource in storage.
      */
     public function update(Request $request, Supplier $supplier)
     {
