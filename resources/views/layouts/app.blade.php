@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>@yield('titulo', 'Aurora')</title>
     {{-- @vite('resources/css/app.css') --}}
 </head>
