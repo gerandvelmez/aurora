@@ -4,8 +4,8 @@
 
 @section('contenido')
 <div
-  class="hero min-h-screen"
-  style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
+  class="hero min-h-screen"  
+  style="background-image: url(https://picsum.photos/id/287/4288/2848">
   <div class="hero-overlay bg-opacity-60"></div>
   <div class="hero-content text-neutral-content text-center">
     <div class="max-w-md">
